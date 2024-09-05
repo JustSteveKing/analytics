@@ -42,12 +42,12 @@ class AnalyticsTest extends TestCase
      */
     public function testPlausible()
     {
-        $pageviewEvent = new Event();
+        $pageviewEvent = new Event;
         $pageviewEvent
             ->setType('pageview')
             ->setUrl('https://www.appwrite.io/docs/pageview123');
 
-        $normalEvent = new Event();
+        $normalEvent = new Event;
         $normalEvent->setType('testEvent-'.chr(mt_rand(97, 122)).substr(md5(time()), 1, 5))
             ->setName('testEvent')
             ->setUrl('https://www.appwrite.io/docs/installation')
@@ -215,7 +215,7 @@ class AnalyticsTest extends TestCase
      */
     public function testOrbit(): void
     {
-        $event = new Event();
+        $event = new Event;
         $event->setType('testEvent')
             ->setName('testEvent')
             ->setUrl('https://www.appwrite.io/docs/installation')
@@ -251,7 +251,7 @@ class AnalyticsTest extends TestCase
     public function testMixpanel()
     {
         /** Create a simple track event */
-        $event = new Event();
+        $event = new Event;
         $event
             ->setName('testEvent')
             ->setType('click')
